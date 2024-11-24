@@ -1,0 +1,450 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: yellow;
+}
+header{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("Orchid-background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+}
+.navbar{
+    height: 7%;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    top: 30px;
+}
+.fixed_navbar{
+    height: 7%;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    background-color: white;
+    padding-top: 2rem;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    a{
+        color: black;
+    }
+    
+}
+.refresh_logo{
+    height: 100%;
+    position:relative;
+    left: 5%;
+    top: -12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo_section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    width: 450px;
+    max-width: 65vw;
+    filter: contrast(150%) saturate(250%);
+}
+#refresh{
+    height: 100%;
+}
+#headline{
+    text-align: center;
+    width: 70vw;
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: whitesmoke;
+}
+
+.side-bar{
+    height: 10%;
+    position: absolute;
+    right: 3%;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+}
+
+.links{
+    height: 10%;
+    width: 350px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 7%;
+    color: yellow;
+    font-weight: bolder;
+}
+
+.fa-solid.fa-xmark.fa-lg.xmark{
+    display: none;
+}
+.fa-solid.fa-xmark.fa-lg.xmark1{
+    display: block;
+    color: darkgray;
+}
+.fa-solid.fa-bars.fa-lg{
+    color: darkgray;
+}
+.fa-solid.fa-bars.fa-lg.bar{
+    display: none;
+}
+
+
+.dropdown_menu{
+    height: 160px;
+    width: 125px;
+    position: fixed;
+    right: 7px;;
+    top: 65px;
+    list-style-type: none;
+    background-color: rgba(54, 144, 247, 0.9);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    a{
+        color: black;
+    }
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown_menu.open{
+    display: block;
+}
+
+@media(max-width: 700px){
+    .links{
+        visibility: hidden;
+    }
+    .side-bar{
+        visibility: visible;
+    }
+}
+
+/* End of navigation bar/header */
+
+.aboutus{
+    min-height:fit-content;
+    background-color: #FEF6C9;
+    text-align: center;
+    padding: 2.2rem 0 2.5rem;
+    
+}
+.aboutus_title{
+    font-size: 30px;
+    font-weight: 500;
+    font-style: oblique;
+    padding: 1.75rem 0 1.75rem;
+}
+.aboutus_text{
+    max-width: 100vw;
+    padding: 1.2rem;
+    font-size: 23px;
+    line-height: 1.7rem;
+}
+
+/* About Us Section Ends here */
+
+
+.events_section{
+    background-color: #FFE4FA;
+    padding-top: 2rem;
+}
+.event_title{
+    font-size: 30px;
+    text-align: center;
+    font-style: oblique;
+    padding-bottom: 10px;
+    /* position: relative; */
+    padding-top: 40px;
+}
+
+.event_subtitle{
+    font-size: 23px;
+    text-align: center;
+    font-style: italic;
+    padding: 20px 0px 20px;
+
+}
+.cointainer{
+    width: 90vw;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+.events{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.events_img{
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+.events_photo{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.events_content{
+    flex: 1;
+}
+.event_heading{
+    font-size: 23px;
+    margin-bottom: 15px;
+    /* color: #333; */
+}
+.events_description{
+    font-size: 18px;
+    line-height: 1.5;
+    /* color: #666; */
+}
+@media screen and (max-width: 690px) {
+    .events_content{
+        padding: 0px 20px;
+    }
+    .event_heading{
+        font-size: 36px;
+    }
+    .events_description{
+        font-size: 17px;
+        margin-bottom: 0px; 
+    }
+    .cointainer{
+        padding: 0px;
+    }
+    .events{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .events_img{
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .events_description{
+        padding: 0px;
+        font-size: 16px;
+    }
+}
+
+/*Events Section Ends here*/
+
+
+.teams_section{
+    background-color: #FDFFFC;
+    height: fit-content;
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 2rem;
+}
+.teams_title{
+    padding: 40px 0 40px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    font-style: oblique;
+}
+.teams_container{
+    display: flex;
+    justify-content: center;
+}
+.teams{
+    height:fit-content;
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.individual{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    flex-grow: 1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.name,.class,.post,.stream{
+    text-align: center;
+    font-style:italic;
+}
+.image{
+    height: 190px;
+    width: 170px;
+    border-radius: 50%;
+    border: 3px solid red;
+}
+.developer{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+.developer_info{
+    height: 300px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+.developer_heading{
+    text-align: center;
+    font-size: 23px;
+    font-style:oblique;
+    margin-top: 90px;
+}
+
+
+/*Teams Section Ends here*/
+
+.contact_us{
+    height: fit-content;
+    width: 100vw;
+    background-color:aquamarine;
+
+}
+.contact_title{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("contact.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: whitesmoke;
+}
+.title{
+    padding: 10px;
+    font-size: 27px;
+}
+.title_info{
+    padding: 15px;
+    font-size: 22px;
+}
+.comm_medium{
+    display: flex;
+    height: fit-content;
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 90vw;
+    justify-content: space-around;
+    position: relative;
+    right: 30px;
+    left: 30px;
+    
+}
+
+.location{
+    width: 400px;
+    background-color: #abc4ff;
+    margin-bottom: 30px;
+    border-radius: 12px ;
+    position:relative;
+    top: -30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#address{
+    padding-bottom: 15px;
+    padding-left: 5px;
+}
+#map_symbol, #email_symbol{
+    padding: 18px;
+}
+.location_title, .email_title{
+    padding: 15px;
+    font-size: 25px;
+}
+#college_address{
+    padding: 7px;
+    font-size: 20px;
+}
+#add_symbol{
+    padding-left: 5px;
+}
+.email{
+    width: 400px;
+    background-color: #ced4da;
+    margin-bottom: 30px;
+    border-radius: 12px ;
+    position:relative;
+    top: -30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.email_info{
+    padding: 5px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+#email{
+    display: flex;
+    font-size: 17px;
+}
+@media(max-width: 550px){
+    .location, .email{
+        width: 80vw;
+    }
+    .comm_medium{
+        right:0px;
+        left:0px;
+        width: 100vw;
+    }
+}
+
+
+
+.footer{
+    display: flex;
+    align-items: center;
+    background-color: #DB5A42;
+    min-height: 40px;
+    height: fit-content;
+    padding: 10px;
+    text-align: center;
+}
+.footer_description{
+    width: 80%;
+    a{
+        color: black;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}
